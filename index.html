@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Austin Kernisant | IT Resume & Portfolio</title>
+
   <style>
     :root {
       --bg: #0f172a;
@@ -19,6 +20,10 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -43,7 +48,7 @@
     }
 
     header {
-      padding: 48px 0 28px;
+      padding: 48px 0 34px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -64,15 +69,46 @@
     }
 
     h1 {
-      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
       line-height: 1;
       margin-bottom: 16px;
     }
 
-    .hero p {
+    .hero-description {
       color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 650px;
+      font-size: 1.08rem;
+      max-width: 680px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+      font-weight: bold;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      transform: translateY(-2px);
+      background: rgba(56, 189, 248, 0.1);
+      border-color: var(--accent);
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #082f49;
+      border-color: var(--accent);
     }
 
     .contact-card {
@@ -84,7 +120,7 @@
     }
 
     .contact-card h2 {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-bottom: 14px;
     }
 
@@ -94,27 +130,47 @@
       font-size: 0.95rem;
     }
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
+    .quick-links {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 11px 16px;
-      border-radius: 999px;
+    .quick-link {
+      display: block;
+      text-align: center;
+      padding: 11px 14px;
+      border-radius: 12px;
       border: 1px solid var(--line);
-      color: var(--text);
       background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
       font-weight: bold;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
     }
 
-    .btn.primary {
+    .quick-link:hover {
+      text-decoration: none;
+      transform: translateY(-2px);
+      background: rgba(56, 189, 248, 0.1);
+      border-color: var(--accent);
+    }
+
+    .quick-link.primary {
       background: var(--accent);
       color: #082f49;
       border-color: var(--accent);
+    }
+
+    .quick-link.disabled {
+      color: var(--muted);
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .quick-link.disabled:hover {
+      transform: none;
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--line);
     }
 
     main {
@@ -219,70 +275,61 @@
         box-shadow: none;
       }
 
-      .hero p,
+      .hero-description,
       .subtle,
       .contact-card p,
       footer {
         color: #374151;
       }
 
-      .btn {
+      .btn,
+      .quick-links {
         display: none;
       }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container hero">
       <div>
         <p class="eyebrow">Information Technology Student · CompTIA A+ Certified</p>
+
         <h1>Austin Kernisant</h1>
-        <p>
-          Entry-level IT professional studying Information Technology at Florida State College at Jacksonville. I am building a strong foundation in troubleshooting, operating systems, hardware, networking, customer support, and web development.
+
+        <p class="hero-description">
+          Entry-level IT professional studying Information Technology at Florida State College at Jacksonville.
+          I am building hands-on skills in troubleshooting, operating systems, hardware, networking, customer support,
+          and web development.
         </p>
+
         <div class="buttons">
           <a class="btn primary" href="mailto:austincroissantwork@gmail.com">Contact Me</a>
           <a class="btn" href="#resume">View Resume</a>
           <a class="btn" href="#projects">View Projects</a>
         </div>
       </div>
-<section id="links" class="section links-section">
-  <h2>Resume & Professional Links</h2>
-  <p class="section-intro">
-    View my resume, GitHub projects, and professional profile below.
-  </p>
 
-  <div class="link-card-container">
-    <div class="link-card">
-      <h3>Resume</h3>
-      <p>Download a PDF copy of my current resume.</p>
-      <a href="resume.pdf" class="btn" download>Download Resume</a>
-    </div>
-
-    <div class="link-card">
-      <h3>GitHub</h3>
-      <p>View my coding projects, website work, and technical practice.</p>
-      <a href="https://github.com/YOUR-GITHUB-USERNAME" class="btn" target="_blank" rel="noopener noreferrer">
-        View GitHub
-      </a>
-    </div>
-
-    <div class="link-card">
-      <h3>LinkedIn</h3>
-      <p>Connect with me professionally and view my career profile.</p>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" class="btn" target="_blank" rel="noopener noreferrer">
-        View LinkedIn
-      </a>
-    </div>
-  </div>
-</section>
       <aside class="contact-card">
-        <h2>Contact</h2>
+        <h2>Contact & Links</h2>
+
         <p><strong>Email:</strong> <a href="mailto:austincroissantwork@gmail.com">austincroissantwork@gmail.com</a></p>
         <p><strong>Phone:</strong> <a href="tel:9043056845">904-305-6845</a></p>
         <p><strong>Location:</strong> Jacksonville, FL</p>
         <p><strong>Goal:</strong> Help Desk / Entry-Level IT Support</p>
+
+        <div class="quick-links">
+          <a class="quick-link primary" href="resume.docx" download>Download Resume</a>
+
+          <a class="quick-link" href="https://github.com/austincroissant" target="_blank" rel="noopener noreferrer">
+            View GitHub
+          </a>
+
+          <a class="quick-link disabled" href="#" aria-disabled="true">
+            LinkedIn Coming Soon
+          </a>
+        </div>
       </aside>
     </div>
   </header>
@@ -290,18 +337,24 @@
   <main class="container" id="resume">
     <section>
       <h2 class="section-title">Professional Summary</h2>
+
       <div class="card">
         <p>
-          Motivated Information Technology student with CompTIA A+ certification, hands-on troubleshooting practice, customer service experience, and beginner web development skills. Experienced in fast-paced team environments and currently developing a business website project to strengthen practical HTML, CSS, JavaScript, and client communication skills.
+          Motivated Information Technology student with CompTIA A+ certification, hands-on troubleshooting practice,
+          customer service experience, and beginner web development skills. Experienced in fast-paced team environments
+          and currently developing real-world website projects to strengthen practical HTML, CSS, JavaScript, deployment,
+          and client communication skills.
         </p>
       </div>
     </section>
 
     <section>
       <h2 class="section-title">Education</h2>
+
       <div class="card">
         <h3>Florida State College at Jacksonville</h3>
         <p class="subtle">Information Technology · Expected Graduation: December 2026</p>
+
         <ul>
           <li>Completed 52 credit hours toward degree requirements.</li>
           <li>Coursework focused on technology fundamentals, productivity software, problem-solving, and IT concepts.</li>
@@ -311,45 +364,72 @@
 
     <section>
       <h2 class="section-title">Certifications</h2>
+
       <div class="grid">
         <div class="card">
           <h3>CompTIA A+</h3>
           <p class="subtle">Earned 2026</p>
-          <p>Validated skills in hardware, mobile devices, networking, troubleshooting, operating systems, security, and IT support procedures.</p>
+          <p>
+            Validated skills in hardware, mobile devices, networking, troubleshooting, operating systems,
+            security, and IT support procedures.
+          </p>
         </div>
+
         <div class="card">
           <h3>Python Institute Certificate</h3>
           <p class="subtle">Beginner Python Certification</p>
-          <p>Built foundational familiarity with Python syntax, programming logic, and basic problem-solving.</p>
+          <p>
+            Built foundational familiarity with Python syntax, programming logic, and basic problem-solving.
+          </p>
         </div>
+
         <div class="card">
           <h3>SoloLearn Java Certificate</h3>
           <p class="subtle">Beginner Java Certification</p>
-          <p>Developed introductory understanding of Java syntax, object-oriented concepts, and programming structure.</p>
+          <p>
+            Developed introductory understanding of Java syntax, object-oriented concepts, and programming structure.
+          </p>
         </div>
       </div>
     </section>
 
     <section id="projects">
       <h2 class="section-title">Projects</h2>
-      <div class="card">
-        <h3>Business Website for Stroking Brushes | Painting and Home Improvement LLC</h3>
-        <p class="subtle">HTML · CSS · JavaScript · Formspree</p>
-        <ul>
-          <li>Building a responsive website for a local painting and home improvement business.</li>
-          <li>Designed the site to advertise services, display contact information, and collect customer inquiries.</li>
-          <li>Integrated a contact form workflow using Formspree for message submissions.</li>
-          <li>Planned future improvements include quote requests, invoice support, and expanded project galleries.</li>
-        </ul>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Stroking Brushes Business Website</h3>
+          <p class="subtle">HTML · CSS · JavaScript · Formspree · Netlify · DNS</p>
+
+          <ul>
+            <li>Built and deployed a responsive website for a local painting and home improvement business.</li>
+            <li>Designed the site to advertise services, display contact information, and collect customer inquiries.</li>
+            <li>Integrated a quote request form workflow using Formspree.</li>
+            <li>Configured public hosting, custom domain setup, DNS records, and HTTPS through Netlify and Namecheap.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Personal Resume & IT Portfolio Website</h3>
+          <p class="subtle">HTML · CSS · GitHub Pages</p>
+
+          <ul>
+            <li>Created a personal resume website to showcase education, certifications, projects, and technical skills.</li>
+            <li>Published the site using GitHub Pages.</li>
+            <li>Added a downloadable resume and professional links section.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section>
       <h2 class="section-title">Experience</h2>
+
       <div class="grid">
         <div class="card">
           <h3>Dave’s Hot Chicken</h3>
           <p class="subtle">Team Member · March 2026 – Present</p>
+
           <ul>
             <li>Deliver customer service in a fast-paced restaurant environment.</li>
             <li>Work with teammates to complete orders accurately and efficiently.</li>
@@ -360,6 +440,7 @@
         <div class="card">
           <h3>Chick-fil-A</h3>
           <p class="subtle">Team Member · October 2023 – August 2025</p>
+
           <ul>
             <li>Provided friendly customer support while maintaining speed and accuracy.</li>
             <li>Collaborated with team members during high-volume service periods.</li>
@@ -371,12 +452,16 @@
 
     <section>
       <h2 class="section-title">Technical Skills</h2>
+
       <div class="card skills">
         <span class="tag">CompTIA A+ Troubleshooting</span>
         <span class="tag">Windows Support</span>
         <span class="tag">Hardware Basics</span>
         <span class="tag">Networking Fundamentals</span>
+        <span class="tag">DNS Basics</span>
         <span class="tag">Command Line Basics</span>
+        <span class="tag">GitHub Pages</span>
+        <span class="tag">Netlify</span>
         <span class="tag">HTML</span>
         <span class="tag">CSS</span>
         <span class="tag">JavaScript</span>
@@ -395,4 +480,3 @@
   </footer>
 </body>
 </html>
-

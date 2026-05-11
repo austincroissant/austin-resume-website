@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Austin Kernisant | IT Resume & Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111c33;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --line: rgba(148, 163, 184, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #020617, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 48px 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent-2);
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 650px;
+    }
+
+    .contact-card {
+      background: rgba(17, 28, 51, 0.85);
+      border: 1px solid var(--line);
+      padding: 24px;
+      border-radius: 22px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .contact-card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+      font-weight: bold;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #082f49;
+      border-color: var(--accent);
+    }
+
+    main {
+      padding: 34px 0 60px;
+    }
+
+    section {
+      margin-top: 28px;
+    }
+
+    .section-title {
+      font-size: 1.55rem;
+      margin-bottom: 16px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(17, 28, 51, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin-bottom: 6px;
+      font-size: 1.15rem;
+    }
+
+    .subtle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: var(--text);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(148, 163, 184, 0.09);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 34px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        color: #111827;
+      }
+
+      header,
+      main,
+      footer {
+        padding: 16px 0;
+      }
+
+      .card,
+      .contact-card {
+        background: #ffffff;
+        color: #111827;
+        border: 1px solid #d1d5db;
+        box-shadow: none;
+      }
+
+      .hero p,
+      .subtle,
+      .contact-card p,
+      footer {
+        color: #374151;
+      }
+
+      .btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <p class="eyebrow">Information Technology Student · CompTIA A+ Certified</p>
+        <h1>Austin Kernisant</h1>
+        <p>
+          Entry-level IT professional studying Information Technology at Florida State College at Jacksonville. I am building a strong foundation in troubleshooting, operating systems, hardware, networking, customer support, and web development.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="mailto:austincroissantwork@gmail.com">Contact Me</a>
+          <a class="btn" href="#resume">View Resume</a>
+          <a class="btn" href="#projects">View Projects</a>
+        </div>
+      </div>
+
+      <aside class="contact-card">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:austincroissantwork@gmail.com">austincroissantwork@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:9043056845">904-305-6845</a></p>
+        <p><strong>Location:</strong> Jacksonville, FL</p>
+        <p><strong>Goal:</strong> Help Desk / Entry-Level IT Support</p>
+      </aside>
+    </div>
+  </header>
+
+  <main class="container" id="resume">
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <div class="card">
+        <p>
+          Motivated Information Technology student with CompTIA A+ certification, hands-on troubleshooting practice, customer service experience, and beginner web development skills. Experienced in fast-paced team environments and currently developing a business website project to strengthen practical HTML, CSS, JavaScript, and client communication skills.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="card">
+        <h3>Florida State College at Jacksonville</h3>
+        <p class="subtle">Information Technology · Expected Graduation: December 2026</p>
+        <ul>
+          <li>Completed 52 credit hours toward degree requirements.</li>
+          <li>Coursework focused on technology fundamentals, productivity software, problem-solving, and IT concepts.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Certifications</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>CompTIA A+</h3>
+          <p class="subtle">Earned 2026</p>
+          <p>Validated skills in hardware, mobile devices, networking, troubleshooting, operating systems, security, and IT support procedures.</p>
+        </div>
+        <div class="card">
+          <h3>Python Institute Certificate</h3>
+          <p class="subtle">Beginner Python Certification</p>
+          <p>Built foundational familiarity with Python syntax, programming logic, and basic problem-solving.</p>
+        </div>
+        <div class="card">
+          <h3>SoloLearn Java Certificate</h3>
+          <p class="subtle">Beginner Java Certification</p>
+          <p>Developed introductory understanding of Java syntax, object-oriented concepts, and programming structure.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="card">
+        <h3>Business Website for Stroking Brushes | Painting and Home Improvement LLC</h3>
+        <p class="subtle">HTML · CSS · JavaScript · Formspree</p>
+        <ul>
+          <li>Building a responsive website for a local painting and home improvement business.</li>
+          <li>Designed the site to advertise services, display contact information, and collect customer inquiries.</li>
+          <li>Integrated a contact form workflow using Formspree for message submissions.</li>
+          <li>Planned future improvements include quote requests, invoice support, and expanded project galleries.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Dave’s Hot Chicken</h3>
+          <p class="subtle">Team Member · March 2026 – Present</p>
+          <ul>
+            <li>Deliver customer service in a fast-paced restaurant environment.</li>
+            <li>Work with teammates to complete orders accurately and efficiently.</li>
+            <li>Maintain professionalism while handling customer requests and time-sensitive tasks.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Chick-fil-A</h3>
+          <p class="subtle">Team Member · October 2023 – August 2025</p>
+          <ul>
+            <li>Provided friendly customer support while maintaining speed and accuracy.</li>
+            <li>Collaborated with team members during high-volume service periods.</li>
+            <li>Built strong habits in communication, reliability, problem-solving, and professionalism.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="card skills">
+        <span class="tag">CompTIA A+ Troubleshooting</span>
+        <span class="tag">Windows Support</span>
+        <span class="tag">Hardware Basics</span>
+        <span class="tag">Networking Fundamentals</span>
+        <span class="tag">Command Line Basics</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Python Basics</span>
+        <span class="tag">Java Basics</span>
+        <span class="tag">Customer Service</span>
+        <span class="tag">Problem Solving</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Austin Kernisant. Built as a personal resume and IT portfolio website.</p>
+    </div>
+  </footer>
+</body>
+</html>

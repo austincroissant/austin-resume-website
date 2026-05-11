@@ -1,0 +1,58 @@
+.links-section {
+  background: #f8fafc;
+  text-align: center;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.link-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.link-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.link-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #111827;
+}
+
+.link-card p {
+  color: #555;
+  margin-bottom: 1.3rem;
+}
+
+.link-card .btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-card .btn:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .link-card-container {
+    grid-template-columns: 1fr;
+  }
+}
